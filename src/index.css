@@ -1,5 +1,65 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  /*font-size: 1rem;*/
 }
+
+#root {
+	height: 100vh;
+}
+
+/*.DOMdiv {
+	height: 100vh;
+}*/
+
+#slogan{
+	font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+	font-size: 2rem;
+	cursor: pointer;
+}
+
+.head-nav {
+	/*background-image: linear-gradient(to right, #6D7ADD, #6d7addad);*/
+	background-color: #6d7add;
+}
+
+.head-nav-content {
+	font-size: 1.5rem;
+	/*line-height: 100%;*/
+	text-align: middle;
+}
+
+.side-bar {
+	background-color: #343a40 !important;
+	color: white;
+	font-size: 1.1rem;
+	cursor: pointer;
+}
+
+.category {
+	margin-top: 15px;
+	margin-bottom: 5px;
+	background-color: #f8f9fa30;
+	border-radius: 5px;
+}
+
+.category:hover {
+	background-color: #f8f9fa20;
+}
+
+.sub-cate {
+	font-size: 1rem;
+	margin-top: 7px;
+	margin-bottom: 7px;
+	padding: 0px 3px 0px 3px;
+	/*box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 40px 0px;
+	overflow: hidden;
+	-webkit-box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);*/
+}
+
+.sub-cate:hover {
+	background-color: #f8f9fa30;
+}
+
+

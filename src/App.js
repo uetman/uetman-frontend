@@ -1,21 +1,27 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import HeadNav from './components/Nav/HeadNav';
+import SideBar from './components/Nav/SideBar';
+import Materials from './components/Storage/Materials';
 import './App.css';
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+    render() {
+        return (
+            <div className="h-100">
+                <div className="col-sm-12 container-fluid head-nav">
+                    <HeadNav />
+                </div>
+                <div className="row">
+                    <div className="col-sm-2 pr-0 d-inline-block bg-dark">
+                        <SideBar />
+                    </div>
+                    <div className="col-sm-10 d-inline-block">
+                        <Materials/>
+                    </div>
+                </div>
+            </div>
+        );
+    }
 }
 
 export default App;
