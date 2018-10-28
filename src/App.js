@@ -2,10 +2,17 @@ import React, { Component } from 'react';
 import HeadNav from './components/Nav/HeadNav';
 import SideBar from './components/Nav/SideBar';
 import Materials from './components/Storage/Materials';
+import Products from './components/Storage/Products';
 import './App.css';
+import {connect} from 'react-redux';
 
 class App extends Component {
     render() {
+        // const Cate = window(this.props.category);
+        var cate ;
+        if (this.props.category === 'Materials') cate = <Materials />;
+        else if (this.props.category === 'Products') cate = <Products />;
+
         return (
             <div className="h-100">
                 <div className="col-sm-12 container-fluid head-nav">
@@ -16,7 +23,7 @@ class App extends Component {
                         <SideBar />
                     </div>
                     <div className="col-sm-10 d-inline-block">
-                        <Materials/>
+                        {cate}
                     </div>
                 </div>
             </div>
@@ -24,4 +31,10 @@ class App extends Component {
     }
 }
 
-export default App;
+const mapStateToProps = (state) => {
+    return {
+        category: state.category
+    }
+};
+
+export default connect(mapStateToProps, null)(App);

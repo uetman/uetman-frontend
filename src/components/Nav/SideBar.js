@@ -10,50 +10,94 @@ class SideBar extends Component {
                 {
                     id: 1,
                     name: 'Trang chủ',
+                    label: 'Home',
+                    isSingle: true,
                     subCategory: []
                 },
                 {
                     id: 2,
                     name: 'Quản lý kho',
+                    label: 'Storage',
+                    isSingle: false,
                     subCategory: [
-                        'Sản phẩm',
-                        'Vật tư',
-                        'Nhập kho',
-                        'Thêm mới'
+                        {
+                            name: 'Sản phẩm',
+                            label: 'Products',
+                        },
+                        {
+                            name: 'Vật tư',
+                            label: 'Materials',
+                        },
+                        {
+                            name: 'Nhập kho',
+                            label: 'ImportStorage',
+                        },
+                        {
+                            name: 'Thêm mới',
+                            label: 'AddStorage',
+                        },
                     ]
                 },
                 {
                     id: 3,
                     name: 'Đơn hàng',
+                    label: 'Deal',
+                    isSingle: false,
                     subCategory: [
-                        'Danh sách',
-                        'Tạo mới'
+                        {
+                            name: 'Danh sách',
+                            label: 'ListDeals',
+                        },
+                        {
+                            name: 'Tạo mới',
+                            label: 'AddDeal',
+                        },                        
                     ]
                 },
                 {
                     id: 4,
                     name: 'Định mức',
+                    label: 'Recipe',
+                    isSingle: false,
                     subCategory: [
-                        'Danh sách',
-                        'Tạo công thức'
+                        {
+                            name: 'Danh sách',
+                            label: 'ListRecipes',
+                        },
+                        {
+                            name: 'Tạo công thức',
+                            label: 'AddRecipe',
+                        },                        
                     ]
                 },
                 {
                     id: 5,
                     name: 'Khách hàng',
+                    label: 'Customer',
+                    isSingle: false,
                     subCategory: [
-                        'Danh sách',
-                        'Thêm mới'
+                        {
+                            name: 'Danh sách',
+                            label: 'ListCustomers',
+                        },
+                        {
+                            name: 'Thêm mới',
+                            label: 'AddCustome',
+                        },
                     ]
                 },
                 {
                     id: 6,
                     name: 'Thống kê',
+                    label: 'Statistic',
+                    isSingle: true,
                     subCategory: []
                 },
                 {
                     id: 7,
                     name: 'Yêu cầu mua hàng (Vật tư cần bổ sung)',
+                    label: 'Require',
+                    isSingle: true,
                     subCategory: []
                 }
             ]
@@ -66,6 +110,8 @@ class SideBar extends Component {
                 key={ category.id }
                 name={ category.name } 
                 subCategory={ category.subCategory } 
+                label = { category.label }
+                isSingle = { category.isSingle }
                 />
         });
 

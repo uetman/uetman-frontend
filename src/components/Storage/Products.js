@@ -3,10 +3,9 @@ import ReactTable from 'react-table';
 import 'react-table/react-table.css';
 import * as apiServer from '../../API/api';
 
-const API = (apiServer.API_ref + "parts/");
-// console.log(API);
+const API = (apiServer.API_ref + "products/");
 
-class Materials extends Component {
+class Products extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -43,17 +42,16 @@ class Materials extends Component {
 		const columns = [
 		  	{
 		    	Header: 'Id',
-		    	accessor: 'part_id', // String-based value accessors!
-				width: 50,
+		    	accessor: 'product_id' // String-based value accessors!
 		  	}, 
 		  	{
 		    	Header: 'Code',
-		    	accessor: 'part_code',
+		    	accessor: 'product_code',
 		   	}, 
 		   	{
 		    	id: 'part_name', // Required because our accessor is not a string
-		    	Header: 'part_name',
-		    	accessor: d => d.part_name // Custom value accessors!
+		    	Header: 'product_name',
+		    	accessor: d => d.product_name // Custom value accessors!
 		  	},
 		  	{
 		    	Header: 'Đơn vị',
@@ -64,23 +62,23 @@ class Materials extends Component {
 		    	accessor: 'quantity_in_stock' // String-based value accessors!
 		  	}, 
 		  	{
-		    	Header: 'Giá',
-		    	accessor: 'purchase_price' // String-based value accessors!
+		    	Header: 'Giá bán',
+		    	accessor: 'sale_price' // String-based value accessors!
 		  	}, 
 		  	{
 		    	Header: props => <span>part_line</span>, // Custom header components!
-		    	accessor: 'part_line'
+		    	accessor: 'product_line'
 		  	}, 
 		  	// {
 		   //  	Header: 'Mô tả',
-		   //  	accessor: 'part_description' // String-based value accessors!
+		   //  	accessor: 'product_description' // String-based value accessors!
 		  	// }, 
 		  	// {
 		   //  	Header: 'Nhà phân phối',
 		   //  	accessor: 'supplier_name' // String-based value accessors!
 		  	// }, 
 	  	];
-		
+
 		const {error, isLoaded, data} = this.state;
 
 		if(error) {
@@ -96,17 +94,12 @@ class Materials extends Component {
 				<ReactTable
 					data={data}
 			    	columns={columns}
-			    	className = "-highlight"
-			    	//showPaginationTop = {true}
-			    	defaultPageSize = {15}
-			    	pageSizeOptions = {[15, 25, 50, 100]}
-			    	filterable = {true}
 			 	></ReactTable>
 			);
-
 		}
-	
-  	}
+
+
+	}
 }
 
-export default Materials;
+export default Products;
