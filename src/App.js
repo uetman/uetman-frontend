@@ -3,16 +3,29 @@ import HeadNav from './components/Nav/HeadNav';
 import SideBar from './components/Nav/SideBar';
 import Materials from './components/Storage/Materials';
 import Products from './components/Storage/Products';
+import Home from './components/Home/Home';
 // import Login from './components/Login/Login';
 import './App.css';
 import {connect} from 'react-redux';
 
 class App extends Component {
     render() {
-        // const Cate = window(this.props.category);
-        var cate ;
-        if (this.props.category === 'Materials') cate = <Materials />;
-        else if (this.props.category === 'Products') cate = <Products />;
+        // const Cate = window(this.props.page);
+        var cate;
+        switch(this.props.page) {
+            default:
+                break;
+            case 'Home':
+                cate = <Home />;
+                break;
+            case 'Materials':
+                cate = <Materials />;
+                break;
+            case 'Products':
+                cate = <Products />;
+                break;
+        }
+
 
         return (
             <div className="h-100">
@@ -34,7 +47,7 @@ class App extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        category: state.category
+        page: state.page
     }
 };
 

@@ -4,8 +4,8 @@ import * as actions from './../../redux/actions';
 
 class Category extends Component {
     handleClick(isSubcate, category, isSingle) {
-        if(isSubcate) this.props.onChangeCategory(category);
-        else if (isSingle) this.props.onChangeCategory(category);
+        if(isSubcate) this.props.onChangePage(category);
+        else if (isSingle) this.props.onChangePage(category);
     }
 
     render() {
@@ -34,8 +34,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch, props) => {
     return {
-        onChangeCategory: (category) => {
-            dispatch(actions.changeCategory(category));
+        onChangePage: (page) => {
+            dispatch(actions.changePage(page));
         }
     }
 };

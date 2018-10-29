@@ -1,11 +1,12 @@
-var initialState = false;
+var initialState = 'Home';
 
 var myReducer = (state = initialState, action) => {
 	switch(action.type) {
-		case 'TOGGLE_STATUS' : 
-			state = !state;
+		case 'CHANGE_PAGE':
+			// console.log(action.category);
+			state = action.page;
 			break;
-		default: 
+		default:
 			break;
 	}
 	

@@ -1,15 +1,10 @@
 import * as types from './../constants/ActionTypes';
 
-export const status = () => {
-	return {
-		type: types.TOGGLE_STATUS
-	}
-}
 
-export const changeCategory = (category) => {
+export const changePage = (page) => {
 	return {
-		type: types.CHANGE_CATEGORY,
-		category: category
+		type: types.CHANGE_PAGE,
+		page: page
 	}
 }
 

@@ -1,11 +1,9 @@
 import { combineReducers } from 'redux';
-import status from './status';
-import category from './category';
+import page from './page';
 import user from './user';
 
 const myReducer = combineReducers({
-	status,
-	category,
+	page,
 	user,
 });
 
