@@ -3,6 +3,7 @@ import HeadNav from './components/Nav/HeadNav';
 import SideBar from './components/Nav/SideBar';
 import Materials from './components/Storage/Materials';
 import Products from './components/Storage/Products';
+// import Login from './components/Login/Login';
 import './App.css';
 import {connect} from 'react-redux';
 
@@ -19,7 +20,7 @@ class App extends Component {
                     <HeadNav />
                 </div>
                 <div className="row">
-                    <div className="col-sm-2 pr-0 d-inline-block bg-dark">
+                    <div className="col-sm-2 pr-0 d-inline-block bg-dark" style={{"minHeight": "95vh"}}>
                         <SideBar />
                     </div>
                     <div className="col-sm-10 d-inline-block">

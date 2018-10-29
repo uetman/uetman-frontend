@@ -95,7 +95,7 @@ class SideBar extends Component {
                 },
                 {
                     id: 7,
-                    name: 'Yêu cầu mua hàng (Vật tư cần bổ sung)',
+                    name: 'Yêu cầu mua hàng',
                     label: 'Require',
                     isSingle: true,
                     subCategory: []

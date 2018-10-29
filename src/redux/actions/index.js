@@ -12,3 +12,17 @@ export const changeCategory = (category) => {
 		category: category
 	}
 }
+
+export const defineUser = (user) => {
+	return {
+		type: types.DEFINE_USER,
+		id: user.id,
+		token: user.token,
+	}
+}
+
+export const eraseUser = () => {
+	return {
+		type: types.ERASE_USER,
+	}
+}
