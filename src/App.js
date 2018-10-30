@@ -4,7 +4,7 @@ import SideBar from './components/Nav/SideBar';
 import Materials from './components/Storage/Materials';
 import Products from './components/Storage/Products';
 import Home from './components/Home/Home';
-// import Login from './components/Login/Login';
+import Login from './components/Login/Login';
 import './App.css';
 import {connect} from 'react-redux';
 
@@ -31,6 +31,7 @@ class App extends Component {
             <div className="h-100">
                 <div className="col-sm-12 container-fluid head-nav">
                     <HeadNav />
+<Login />
                 </div>
                 <div className="row">
                     <div className="col-sm-2 pr-0 d-inline-block bg-dark" style={{"minHeight": "95vh"}}>

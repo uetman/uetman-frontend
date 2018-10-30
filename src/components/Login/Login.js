@@ -4,7 +4,7 @@ import * as actions from './../../redux/actions';
 import * as apiServer from './../../API/api';
 
 const API = (apiServer.API_ref + "auth/signin/");
-console.log(API);
+// console.log(API);
 class Login extends Component {
     constructor(props) {
         super(props);

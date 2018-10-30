@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactTable from 'react-table';
 import 'react-table/react-table.css';
 import * as apiServer from '../../API/api';
+import { connect } from 'react-redux';
 
 const API = (apiServer.API_ref + "products/");
 
@@ -19,7 +20,7 @@ class Products extends Component {
 		fetch(API, { 
 		   	method: 'get',
 		   	headers: {
-		    	'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ7XCJpZFwiOjEsXCJyb2xlc1wiOltdfSIsImlhdCI6MTU0MDUzODExMiwiZXhwIjoxNTQxMTQyOTEyfQ.DRbRsC7SA1ELAwE7oNOMBaxWfXs35QlsB_brM7aAciD1kGxGXWYnlEHuJIP0WWXqWpGvyBvWpOyB-9odnk-fig',		    	
+		    	'Authorization': this.props.token,		    	
 		    }
 		}).then(res => res.json()).then(
 			(result) => {
@@ -102,4 +103,10 @@ class Products extends Component {
 	}
 }
 
-export default Products;
+const mapStateToProps = (state) => {
+	return {
+		token: state.user.token,
+	}
+}
+
+export default connect(mapStateToProps, null)(Products);

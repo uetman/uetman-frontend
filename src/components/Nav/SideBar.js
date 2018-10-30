@@ -116,7 +116,7 @@ class SideBar extends Component {
         });
 
         return (
-            <div className="row container-fluid side-bar pl-4 pr-0 m-0">
+            <div className="row container-fluid side-bar pl-4 pr-0 m-0 pt-3">
                 { elements }
             </div>
         );

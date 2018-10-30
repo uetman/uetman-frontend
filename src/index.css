@@ -10,10 +10,9 @@ body {
 	height: 100vh;
 }
 
-/*.DOMdiv {
-	height: 100vh;
-}*/
-
+/**/
+/*  */
+/*Navbar style*/
 #slogan{
 	font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
 	font-size: 2rem;
@@ -39,13 +38,12 @@ body {
 }
 
 .category {
-	padding-top: 5px;
-	padding-bottom: 5px;
+	padding-top: 8px;
+	padding-bottom: 8px;
 	margin-top: 10px;
 	margin-bottom: 10px;
 	background-color: #f8f9fa30;
 	border-radius: 5px;
-	min-height: 
 }
 
 .category:hover {
@@ -66,4 +64,24 @@ body {
 	background-color: #f8f9fa30;
 }
 
+/*Navbar style*/
+/*  */
+/**/
 
+
+/**/
+/*  */
+/*Component Material Style*/
+
+label {
+	width: 8em;
+	justify-content: left !important;
+}
+
+.my-input {
+	width: 19.5em !important; 
+}
+
+/*Component Material Style*/
+/*  */
+/**/
