@@ -28,8 +28,9 @@ class Login extends Component {
         }).then(res => res.json()).then(
             (result) => {
                 // console.log(result);
+                // console.log(result.token_type + " " + result.access_token);
                 this.props.defineUser({
-                    id: result.user_id,
+                    username: result.username,
                     token: result.token_type + " " + result.access_token
                 });
                 this.setState({
@@ -53,11 +54,9 @@ class Login extends Component {
     	
 }
 
-const mapStateToProps = (state) => {
-    return {
-        token: state.user
-    }
-};
+// const mapStateToProps = (state) => {
+
+// };
 
 const mapDispatchToProps = (dispatch, props) => {
     return {
@@ -67,4 +66,4 @@ const mapDispatchToProps = (dispatch, props) => {
     }
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Login);
+export default connect(null, mapDispatchToProps)(Login);

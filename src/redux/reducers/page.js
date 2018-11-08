@@ -1,4 +1,4 @@
-var initialState = 'Materials';
+var initialState = 'Home';
 
 var myReducer = (state = initialState, action) => {
 	switch(action.type) {

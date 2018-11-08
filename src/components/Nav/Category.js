@@ -11,7 +11,7 @@ class Category extends Component {
     render() {
     	let sub_category = this.props.subCategory.map((subCate, index) => {
         		// console.log(subCate);
-        		return 	(<div className="nav-item ml-4 sub-cate" key={index} onClick= { () => { this.handleClick(true, subCate.label) } }>
+        		return 	(<div className="nav-item ml-4 sub-cate float-right" key={index} onClick= { () => { this.handleClick(true, subCate.label) } }>
         					{subCate.name}
         				</div>)
         	});

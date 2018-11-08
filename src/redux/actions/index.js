@@ -11,7 +11,7 @@ export const changePage = (page) => {
 export const defineUser = (user) => {
 	return {
 		type: types.DEFINE_USER,
-		id: user.id,
+		username: user.username,
 		token: user.token,
 	}
 }

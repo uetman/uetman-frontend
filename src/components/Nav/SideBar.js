@@ -28,75 +28,40 @@ class SideBar extends Component {
                             name: 'Vật tư',
                             label: 'Materials',
                         },
-                        {
-                            name: 'Nhập kho',
-                            label: 'ImportStorage',
-                        },
-                        {
-                            name: 'Thêm mới',
-                            label: 'AddStorage',
-                        },
                     ]
                 },
                 {
                     id: 3,
                     name: 'Đơn hàng',
-                    label: 'Deal',
-                    isSingle: false,
-                    subCategory: [
-                        {
-                            name: 'Danh sách',
-                            label: 'ListDeals',
-                        },
-                        {
-                            name: 'Tạo mới',
-                            label: 'AddDeal',
-                        },                        
-                    ]
+                    label: 'Orders',
+                    isSingle: true,
+                    subCategory: [] 
                 },
                 {
                     id: 4,
                     name: 'Định mức',
-                    label: 'Recipe',
-                    isSingle: false,
-                    subCategory: [
-                        {
-                            name: 'Danh sách',
-                            label: 'ListRecipes',
-                        },
-                        {
-                            name: 'Tạo công thức',
-                            label: 'AddRecipe',
-                        },                        
-                    ]
-                },
-                {
-                    id: 5,
-                    name: 'Khách hàng',
-                    label: 'Customer',
-                    isSingle: false,
-                    subCategory: [
-                        {
-                            name: 'Danh sách',
-                            label: 'ListCustomers',
-                        },
-                        {
-                            name: 'Thêm mới',
-                            label: 'AddCustome',
-                        },
-                    ]
-                },
-                {
-                    id: 6,
-                    name: 'Thống kê',
-                    label: 'Statistic',
+                    label: 'Recipes',
                     isSingle: true,
                     subCategory: []
                 },
+                // {
+                //     id: 5,
+                //     name: 'Khách hàng',
+                //     label: 'Customers',
+                //     isSingle: true,
+                //     subCategory: []
+                // },
+                // {
+                //     id: 6,
+                //     name: 'Thống kê',
+                //     label: 'Statistic',
+                //     isSingle: true,
+                //     subCategory: []
+                // },
                 {
                     id: 7,
                     name: 'Yêu cầu mua hàng',
-                    label: 'Require',
+                    label: 'Requires',
                     isSingle: true,
                     subCategory: []
                 }

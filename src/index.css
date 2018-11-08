@@ -1,56 +1,107 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  /*font-size: 1rem;*/
-  overflow-x: hidden;
-}
-
 #root {
 	height: 100vh;
 }
 
+body {
+	margin: 0;
+	padding: 0;
+	font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+	/*font-size: 1rem;*/
+	overflow-x: hidden;
+	color: white;
+	background-image: linear-gradient(to right, #B06AB3, #86A8E7, #B06AB3);
+	transition: all 0.4s;
+}
 /**/
 /*  */
 /*Navbar style*/
 #slogan{
+	margin-left: 1rem;
 	font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+	/*font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;*/
 	font-size: 2rem;
 	cursor: pointer;
+	text-shadow: 1px 1px 3px #ccc;
+	/*color: #5D26C1;*/
 }
 
+.rainbow {
+  /*background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );*/
+  /*background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );*/
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #86A8E7), color-stop(0.33, #f2f), color-stop(0.66, #22f), color-stop(1, #2ff) );
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.rainbow2 {
+	font-size: 1rem;
+  /*background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );*/
+  /*background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );*/
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #23074d), color-stop(0.33, #cc5333), color-stop(0.66, #23074d), color-stop(1, #cc5333) );
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+#logo {
+	height: 48px;
+}
 .head-nav {
-	/*background-image: linear-gradient(to right, #6D7ADD, #6d7addad);*/
-	background-color: #6d7add;
+	/*background-image: linear-gradient(to right, #6dd5ed, #2193b0);*/
+
+	/*background-image: linear-gradient(to left, #667eea, #764ba2);*/
+	/*background-image: linear-gradient(to right, #7F7FD5, #B06AB3, #7F7FD5);*/
+	background-color: white;
+	color: black;
+	box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5), 0 6px 25px 0 rgba(0, 0, 0, 0.1); 
+}
+
+.d-flex {	
+	align-items: center;
 }
 
 .head-nav-content {
-	font-size: 1.5rem;
+	font-size: 1.2rem;
+	font-weight: 100;
 	/*line-height: 100%;*/
-	text-align: middle;
+}
+
+.log-out {
+	color: mediumpurple;
+	cursor: pointer;
+}
+
+.side-bar-root {
+	/*background-image: linear-gradient(to bottom right, #a1c4fd, #c2e9fb);*/
 }
 
 .side-bar {
-	background-color: #343a40 !important;
 	color: white;
 	font-size: 1.1rem;
 	cursor: pointer;
 }
 
 .category {
-	padding-top: 8px;
-	padding-bottom: 8px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	background-color: #f8f9fa30;
-	border-radius: 5px;
+	/*text-align: center;*/
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	margin-top: 0.8rem;
+	margin-bottom: 0.8rem;
+	/*background-color: red;*/
+	/*background-image: linear-gradient(to right, #B06AB3, #65C7F7, #0052D4);*/
+	background-image: linear-gradient(to left, #667eea, #764ba2);
+	border-radius: 0.5rem;
+	box-shadow: 0 0 30px 0 rgba(1, 1, 1, 0.2); 
+	transition: 2s;
 }
 
 .category:hover {
-	background-color: #f8f9fa20;
+	background-image: linear-gradient(to right, #667eea, #764ba2);
 }
 
 .sub-cate {
+	align-content: center;
+	text-align: center;
 	font-size: 1rem;
 	margin-top: 7px;
 	margin-bottom: 7px;
@@ -82,6 +133,9 @@ label {
 	width: 19.5em !important; 
 }
 
+.modal {
+	color: black;
+}
 /*Component Material Style*/
 /*  */
 /**/

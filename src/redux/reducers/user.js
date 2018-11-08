@@ -1,5 +1,5 @@
 var initialState = {
-	id: '',
+	username: '',
 	token: '',	
 	logged: false,
 };
@@ -7,18 +7,20 @@ var initialState = {
 var myReducer = (state = initialState, action) => {
 	switch (action.type) {
 		default:
-			break;
+			return state;
 		case 'DEFINE_USER':
-			state.id = action.id;
-			state.token = action.token;
-			state.logged = true;
-			break;
+			return {
+				username: action.username,
+				token: action.token,
+				logged: true,
+			}
 		case 'ERASE_USER':
-			state.id = '';
-			state.token = '';
-			state.logged = false;
+			return {
+				username: '',
+				token: '',
+				logged: false,
+			}
 	}
-	return state;
 }
 
 export default myReducer;
